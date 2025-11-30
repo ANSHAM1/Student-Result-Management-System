@@ -1,12 +1,44 @@
-# React + Vite
+# 📘 Student Result Manager
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A clean, modern React + Vite application with JSON Server backend to **Add, View, Edit, and Delete** student result records.
 
-Currently, two official plugins are available:
+This project fulfills the assignment requirement of building a **CRUD full-stack app** using:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **React (with useState only)**
+- **Vite (frontend bundler)**
+- **JSON Server (backend)**
+- **Fetch API (for CRUD operations)**
+- **Manual data loading (no useEffect)**
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## ✨ Features
+
+### 📄 Student List
+- View all students in a clean admin dashboard table  
+- Manual **Load Students** button to fetch data  
+- Action buttons: **View Details**, **Edit**, **Delete**
+
+### 📝 Add Student
+- Form fields: Name, Section, Marks, Grade  
+- Saved to JSON Server using **POST**
+
+### ✏ Edit Student
+- Pre-filled form  
+- Update data using **PUT**
+
+### 🔍 View Details
+- Neatly displayed student information  
+- Read-only UI card
+
+### 🗑 Delete Student
+- Remove student using **DELETE**  
+- Confirmation alert for safe deletion
+
+### 🎨 Clean, Modern Admin UI
+- Professional spacing, cards, shadows  
+- Fully responsive  
+- No external UI libraries (pure CSS)  
+- Perfect for academic submission
+
+---
