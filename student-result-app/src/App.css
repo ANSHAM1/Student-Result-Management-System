@@ -1,0 +1,256 @@
+/* Clean Admin Dashboard theme (style 2) */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap");
+
+:root {
+  --bg: #f4f6f9;
+  --card: #ffffff;
+  --muted: #6b7280;
+  --accent: #2563eb;
+  --accent-600: #1d4ed8;
+  --danger: #dc2626;
+  --soft: #eef2ff;
+  --shadow: 0 6px 20px rgba(16, 24, 40, 0.06);
+}
+
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial;
+  background: var(--bg);
+  color: #0f172a;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  padding: 28px;
+}
+
+/* Layout */
+.admin-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+/* Header */
+.admin-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+
+.brand-left {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+.brand-logo {
+  width: 56px;
+  height: 56px;
+  border-radius: 10px;
+  background: linear-gradient(135deg, var(--accent), #7c3aed);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  box-shadow: var(--shadow);
+}
+.brand-text .app-title {
+  font-weight: 700;
+  font-size: 18px;
+}
+.brand-text .app-sub {
+  font-size: 13px;
+  color: var(--muted);
+}
+
+/* Header actions */
+.brand-right {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.btn {
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: 0;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 14px;
+  box-shadow: none;
+}
+.btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+.btn-primary {
+  background: var(--accent);
+  color: white;
+  box-shadow: 0 6px 18px rgba(37, 99, 235, 0.12);
+}
+.btn-ghost {
+  background: white;
+  border: 1px solid #e6eefc;
+  color: var(--muted);
+}
+
+/* Main area */
+.admin-main {
+  display: block;
+}
+
+/* Card wrapper */
+.card {
+  background: var(--card);
+  border-radius: 12px;
+  padding: 18px;
+  box-shadow: var(--shadow);
+}
+
+/* StudentList styles */
+.list-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+.hint {
+  color: var(--muted);
+  font-size: 13px;
+}
+
+/* Table */
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 8px;
+  font-size: 14px;
+}
+.table thead th {
+  text-align: left;
+  color: var(--muted);
+  font-size: 13px;
+  padding: 10px 8px;
+  border-bottom: 1px solid #f1f5f9;
+}
+.table tbody td {
+  padding: 12px 8px;
+  border-top: 1px solid #f8fafc;
+}
+.row-name {
+  font-weight: 600;
+  color: #0b1220;
+}
+.actions {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+/* Action buttons */
+.action-btn {
+  padding: 6px 8px;
+  border-radius: 8px;
+  border: 0;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 13px;
+}
+.view-btn {
+  background: #eef2ff;
+  color: #1e40af;
+}
+.edit-btn {
+  background: #ecfdf5;
+  color: #059669;
+}
+.delete-btn {
+  background: #fff1f2;
+  color: #b91c1c;
+}
+
+/* Empty / center */
+.center {
+  padding: 28px;
+  text-align: center;
+  color: var(--muted);
+}
+
+/* Form */
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-top: 6px;
+}
+.form-field label {
+  display: block;
+  font-size: 13px;
+  color: var(--muted);
+  margin-bottom: 6px;
+}
+input[type="text"],
+input[type="number"],
+select {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid #e6eefc;
+  font-size: 14px;
+  outline: none;
+}
+input:focus,
+select:focus {
+  border-color: var(--accent-600);
+  box-shadow: 0 6px 14px rgba(37, 99, 235, 0.06);
+}
+
+/* Form footer */
+.form-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 14px;
+}
+
+/* Details */
+.detail-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin-top: 12px;
+}
+.detail-item {
+  background: #fbfdff;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #f1f5f9;
+}
+.detail-item strong {
+  display: block;
+  margin-bottom: 6px;
+  color: var(--muted);
+}
+
+/* Footer */
+.admin-footer {
+  text-align: center;
+  color: var(--muted);
+  font-size: 13px;
+  margin-top: 6px;
+}
+
+/* Responsive */
+@media (max-width: 880px) {
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+  .detail-grid {
+    grid-template-columns: 1fr;
+  }
+}
